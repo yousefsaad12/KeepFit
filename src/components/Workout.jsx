@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Hero() {
+export default function Workout() {
   return (
     <div>
-      <h1> hero </h1>
+      <h1> Workout </h1>
     </div>
   )
 }
