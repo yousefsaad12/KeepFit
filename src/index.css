@@ -10,3 +10,13 @@ span{
   font-family: inherit;
   font-weight: inherit;
 }
+
+
+
+.blueShadow:hover{
+
+  transition: background-color 0.4s, transform 0.4s;
+  transform: scale(1.15);
+  background-color: #60a5fa;
+  color: #020617;
+}
