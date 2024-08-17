@@ -7,12 +7,15 @@ import { WORKOUTS } from '../utils/swoldier'
 export default function Generator() {
 
   const [showModel, setshowModel] = useState(false)
+  const [poison, setPoison] = useState('individual')
+  const [muscles, setMuscles] = useState([])
+  const [goals, setGoals] = useState('strength_power')
 
   function toggleModel()
   {
     setshowModel(!showModel)
   }
-  
+
   return (
      <SectionWrapper 
       header = {"generate your workout"} 
