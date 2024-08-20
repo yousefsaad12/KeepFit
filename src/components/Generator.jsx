@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SectionWrapper from './SectionWrapper'
 import Header from './Header'
-import { WORKOUTS } from '../utils/swoldier'
+import { SCHEMES, WORKOUTS } from '../utils/swoldier'
 
 
 export default function Generator() {
@@ -28,8 +28,13 @@ export default function Generator() {
 
       {Object.keys(WORKOUTS).map((type, typeIndex)=> {
         return (
-          <button key={typeIndex} className=' blueShadow
-          bg-slate-950 border py-3 border-blue-400 rounded-3xl'>
+          <button key={typeIndex}
+          onClick={() => {
+            setPoison(type)
+          }} 
+          className={'blueShadow bg-slate-950 border py-3 border-blue-400 rounded-3xl'
+          }>
+
               <p className='capitalize'>{type.replaceAll("_"," ")}</p>
           </button>
         )
@@ -50,6 +55,23 @@ export default function Generator() {
       {showModel && (
         <div>model</div>
       )}
+    </div>
+
+
+    
+    <Header index={'03'} title={'Become Juggernaut'}description={'Select Your ultimate objective.'}/>
+
+    <div className='grid grid-cols-3  gap-4'>
+
+      {Object.keys(SCHEMES).map((scheme, schemeIndex)=> {
+        return (
+          <button key={schemeIndex} className=' blueShadow
+          bg-slate-950 border py-3 border-blue-400 rounded-3xl'>
+              <p className='capitalize'>{scheme.replaceAll("_"," ")}</p>
+          </button>
+        )
+        
+      })}
     </div>
 
     </SectionWrapper>
